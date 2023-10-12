@@ -1,0 +1,14 @@
+.Input {
+    margin: 0.5rem;
+    label {
+        font-size: 12px;
+    }
+
+    input {
+        width: 100%;
+
+        .error {
+            border-color: red;
+        }
+    }
+}
