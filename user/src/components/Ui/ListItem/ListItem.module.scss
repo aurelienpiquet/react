@@ -1,0 +1,9 @@
+.UserListItem {
+  margin: 10px 0;
+  border: 1px solid black;
+  padding: 10px;
+  pointer-events: fill;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
