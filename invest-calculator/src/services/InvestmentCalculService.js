@@ -15,7 +15,7 @@ export const calcul = (data) => {
           yearlyInterest: yearlyInterest,
           yearlyContribution: yearlyContribution,
         })
-    };
+    }
     
     return yearlyData;
 }
