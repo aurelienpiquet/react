@@ -15,38 +15,15 @@ const InvestmentForm = (props) => {
 
   const onChangeHandler = (event) => {
     setInvestment((prevState) => {
-      if (event.target.id === 'current') {
-        return {
-          ...prevState,
-          current: event.target.value,
-        }
-      }
-  
-      if (event.target.id === 'yearly') {
-        return {
-          ...prevState,
-          yearly: event.target.value,
-        }
-      }
-  
-      if (event.target.id === 'expected') {
-        return {
-          ...prevState,
-          expected: event.target.value,
-        }
-      }
-  
-      if (event.target.id === 'duration') {
-        return {
-          ...prevState,
-          duration: event.target.value,
-        }
+      return {
+        ...prevState,
+        [event.target.id]: event.target.value,
       }
     })
   }
 
   const isValid = (investment) => {
-    return   investment.current !== '' && investment.yearly !== '' && investment.yearly !== '' && investment.duration !== '';
+    return investment.current !== '' && investment.yearly !== '' && investment.yearly !== '' && investment.duration !== '';
   }
 
   const onSubmitHandler = (event) => {
