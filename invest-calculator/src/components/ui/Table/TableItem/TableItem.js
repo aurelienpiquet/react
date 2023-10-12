@@ -7,10 +7,10 @@ const TableItem = ({ item }) => {
   return (
     <tr className={styles.TableItem}>
       <td>{item.year}</td>
-      <td>{item.savingsEndOfYear}</td>
-      <td>{item.totalSaving}</td>
-      <td>{item.yearlyInterest}</td>
-      <td>{item.yearlyContribution}</td>
+      <td>{item.savingsEndOfYear.toFixed(2)}</td>
+      <td>{item.totalSaving.toFixed(2)}</td>
+      <td>{item.yearlyInterest.toFixed(2)}</td>
+      <td>{item.yearlyContribution.toFixed(2)}</td>
     </tr>
   );
 }

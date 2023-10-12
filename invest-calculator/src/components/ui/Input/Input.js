@@ -6,8 +6,12 @@ const Input = (props) => {
   const [error, setError] = useState(false);
 
   const onChangeHandler = (event) => {
-    setError(!Number(event.target.value));
-    props.onChange(event);
+      if (event.target.id) {
+          setError(event.target.value === '');
+          props.onChange(event);
+      } else {
+          setError(false);
+      }
   }
 
   return (
@@ -20,7 +24,7 @@ const Input = (props) => {
         id={ props.id }
         key={ props.id }
         onChange={ onChangeHandler }
-        className={ (!props.arrow ? 'arrow' : '') + ' ' + (error ? 'error' : '')}
+        className={(props.arrow ? '' : styles.arrows) + ' ' + (error ? styles.error : '')}
         value={ props.value }
       /> 
     </div>

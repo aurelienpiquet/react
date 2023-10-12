@@ -14,8 +14,6 @@ const InvestmentForm = (props) => {
   const [investment, setInvestment] = useState(defaultInvestment);
 
   const onChangeHandler = (event) => {
-    console.log(event.target.id, event.target.value);
-
     setInvestment((prevState) => {
       if (event.target.id === 'current') {
         return {
@@ -51,8 +49,6 @@ const InvestmentForm = (props) => {
     return   investment.current !== '' && investment.yearly !== '' && investment.yearly !== '' && investment.duration !== '';
   }
 
-  // console.log(investment);
-
   const onSubmitHandler = (event) => {
     event.preventDefault();
 
@@ -75,23 +71,21 @@ const InvestmentForm = (props) => {
       <div className="input-group">
         <Input 
           htmlFor='current'
-          type='text'
+          type='number'
           id='current'
           onChange={ onChangeHandler }
           labelAnnotation='$'
           label='Current Savings'
-          arrow={ false }
           value={ investment.current }
 
           />
         <Input 
           htmlFor='yearly'
-          type='text'
+          type='number'
           id='yearly'
           onChange={ onChangeHandler }
           labelAnnotation='$'
           label='Yearly Savings'
-          arrow={ false }
           value={ investment.yearly }
 
         />
@@ -105,16 +99,16 @@ const InvestmentForm = (props) => {
           labelAnnotation='%, per year'
           label='Expected Interest'
           value={ investment.expected }
+          arrow={ true }
 
           />
         <Input 
           htmlFor='duration'
-          type='text'
+          type='number'
           id='duration'
           onChange={ onChangeHandler }
           labelAnnotation='years'
           label='Investment Duration'
-          arrow={ false }
           value={ investment.duration }
 
         />

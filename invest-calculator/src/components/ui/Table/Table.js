@@ -8,7 +8,6 @@ const Table = ({ items }) => {
     <TableItem item={item} />
   ));
 
-  console.log(items.length)
   return (
     <div className={styles.Table}>
       <table className="result">
