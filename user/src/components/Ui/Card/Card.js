@@ -5,7 +5,7 @@ import styles from './Card.module.scss';
 const Card = (props) => {
   if (props.show === true || props.show === undefined) {
     return (
-        <div className={styles.Card}>
+        <div className={`${styles.Card} ${props.className}`}>
           {props.children}
         </div>
     );

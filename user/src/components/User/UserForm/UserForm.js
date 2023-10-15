@@ -4,11 +4,15 @@ import styles from './UserForm.module.scss';
 import Input from "../../Ui/Input/Input";
 import User from "../User";
 import {UserModel} from "../../../Models/UserModel";
+import Button from "../../Ui/Button/Button";
+import ErrorModal from "../../Ui/Modal/ErrorModal/ErrorModal";
+import Card from "../../Ui/Card/Card";
 
 const userDefault = new UserModel();
 
 const UserForm = (props) => {
     const [user, setUser] = useState(userDefault);
+    const [error, setError] = useState(null);
 
     const onChangeHandler = (event) => {
         setUser((prevState) => {
@@ -25,6 +29,10 @@ const UserForm = (props) => {
         const createdUser = new UserModel(user.username, user.age, user.id);
 
         if (!createdUser.getIsValid()) {
+            setError({
+                title: 'Error occured',
+                message: 'Something went really wrong'
+            })
             return;
         }
 
@@ -35,26 +43,39 @@ const UserForm = (props) => {
         setUser(new UserModel());
     }
 
+    const onDismissHandler = () => {
+        setError(null);
+    }
+
     return (
-        <form className={styles.UserForm}
-            onSubmit={ onSubmitHandler }
-        >
-            <Input
-                label='Username'
-                id='username'
-                type='text'
-                onChange={ onChangeHandler }
-                value={user.username}
-            />
-            <Input
-                label='Age (Years)'
-                id='age'
-                type='number'
-                onChange={ onChangeHandler }
-                value={user.age}
-            />
-            <button type='submit'>Add User</button>
-        </form>
+        <div>
+            { error && <ErrorModal onDismiss={ onDismissHandler } error={error} /> }
+            <Card className={styles.UserForm}>
+                <form
+                      onSubmit={ onSubmitHandler }
+                >
+                    <Input
+                        label='Username'
+                        id='username'
+                        type='text'
+                        onChange={ onChangeHandler }
+                        value={user.username}
+                    />
+                    <Input
+                        label='Age (Years)'
+                        id='age'
+                        type='number'
+                        onChange={ onChangeHandler }
+                        value={user.age}
+                    />
+
+                    <Button
+                        text={'Add user'}
+                        type={'submit'}
+                    />
+                </form>
+            </Card>
+        </div>
     );
 }
 

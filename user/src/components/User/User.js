@@ -13,6 +13,13 @@ const User = () => {
     const show = result.length > 0;
 
     const onSubmitHandler = (user) => {
+       // setResult((prevState) => {
+       //     return [
+       //         ...prevState,
+       //         user
+       //     ]
+       // })
+
         userListing.push(user);
         setResult([...userListing]);
     }
@@ -24,9 +31,7 @@ const User = () => {
 
     return (
         <div className={styles.User}>
-            <Card>
-                <UserForm onSubmit={ onSubmitHandler }/>
-            </Card>
+            <UserForm onSubmit={ onSubmitHandler }/>
 
             <Card show={show}>
                 <List

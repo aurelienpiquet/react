@@ -7,6 +7,6 @@ export class UserModel {
     }
 
     getIsValid = () => {
-        return this.username !== '' && Number(this.age) > 0;
+        return this.username !== '' && +this.age > 0;
     }
 }

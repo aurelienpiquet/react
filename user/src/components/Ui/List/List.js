@@ -19,7 +19,7 @@ const List = (props) => {
     ));
 
     return  (
-        <div className={styles.UserList}>
+        <div className={styles.List}>
             { items }
         </div>
     );
