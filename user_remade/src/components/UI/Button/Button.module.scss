@@ -1,0 +1,17 @@
+.Button {
+  width: 100%;
+  padding: 10px;
+
+  button {
+    width: 100px;
+    height: 40px;
+    background-color: #407340;
+    color: white;
+    border-radius: 5px;
+    border-color: #407340;
+
+    &:hover {
+      background-color: #549854;
+    }
+  }
+}
