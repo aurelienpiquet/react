@@ -1,0 +1,16 @@
+.TaskList {
+  background-color: #d7d5d5;
+  padding: 20px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      margin: 5px 0;
+      width: 100%;
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.ProjectForm {
+  width: 600px;
+  margin: 50px auto;
+
+  .btnGroup {
+    display: flex;
+    width: fit-content;
+    margin-left: auto;
+    justify-content: end;
+  }
+}

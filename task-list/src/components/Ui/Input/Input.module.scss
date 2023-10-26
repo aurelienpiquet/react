@@ -1,0 +1,28 @@
+.Input {
+  width: 100%;
+  border: none;
+  margin: 20px 0;
+  text-align: left;
+
+  label {
+    color: grey;
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+  }
+
+  input, textarea {
+    background-color: #a6a4a4;
+    color: black;
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    padding: 5px 10px;
+  }
+
+  .error {
+    color: red;
+    font-size: 14px;
+    margin: 0;
+  }
+}

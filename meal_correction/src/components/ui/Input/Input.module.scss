@@ -1,0 +1,14 @@
+.Input {
+  label {
+    font-weight: bold;
+    margin-right: 15px;
+  }
+
+  input {
+    width: 30px;
+  }
+}
+
+.invalid {
+  border: 1px solid red;
+}

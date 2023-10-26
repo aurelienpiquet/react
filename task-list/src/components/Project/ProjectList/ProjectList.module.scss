@@ -1,0 +1,33 @@
+.ProjectList {
+  ul {
+    padding: 0;
+    width: 100%;
+
+    li {
+      list-style-type: none;
+      margin: 5px 0;
+      width: 100%;
+      display: flex;
+
+      &:hover {
+        background-color: #211f1f;
+        transition: 0.1s;
+      }
+
+
+      a {
+        color: white;
+        font-size: 16px;
+        text-decoration: none;
+        width: 100%;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+
+.selected {
+  background-color: #211f1f;
+  transition: 0.1s;
+}

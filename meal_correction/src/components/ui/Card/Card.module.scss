@@ -1,0 +1,19 @@
+.CardDark {
+  background-color: #3f3b3b;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+  width: 600px;
+  margin: 30px auto;
+  padding: 20px 40px;
+}
+
+.CardLight {
+  background-color: white;
+  color: black;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+  width: 900px;
+  margin: 30px auto;
+  padding: 20px 40px;
+}

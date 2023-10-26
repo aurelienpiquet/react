@@ -1,0 +1,33 @@
+.ProjectDetails {
+  text-align: left;
+  margin: 0 15px;
+  width: 80%;
+
+  section {
+    border-bottom: 1px solid grey;
+  }
+
+  .ProjectDetailsTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      font-size: 50px;
+      margin: 10px 0;
+    }
+  }
+
+  .date {
+    color: grey;
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+}
+
+
+

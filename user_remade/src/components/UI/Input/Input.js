@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Input.module.scss';
 
 const Input = (props) => {
+    const inputRef = useRef('');
+
     const onChangeHandler = (event) => {
+        console.log('from ref ' + inputRef.current.value)
         props.onChange(event);
     }
 
@@ -15,6 +18,7 @@ const Input = (props) => {
                 value={ props.value }
                 type={ props.type || 'text'}
                 onChange={ onChangeHandler }
+                ref={ inputRef }
             />
         </div>
     );

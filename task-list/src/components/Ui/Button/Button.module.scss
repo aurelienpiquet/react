@@ -1,0 +1,36 @@
+.Button {
+  border-radius: 10px;
+  width: fit-content;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 20px;
+  max-height: 50px;
+}
+
+.white {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(255, 255, 255, 0);
+  color: black;
+
+  &:hover {
+    border: 1px solid rgb(82, 57, 57);
+    transition: 0.3sec;
+  }
+}
+
+.dark {
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+}
+
+.grey {
+  color: grey;
+  background-color: #282626;
+  border: 1px solid #282626;
+
+  &:hover {
+    border: 1px solid rgb(255, 255, 255);
+    transition: 0.3sec;
+  }
+}

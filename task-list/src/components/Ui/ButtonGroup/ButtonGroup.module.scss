@@ -1,0 +1,15 @@
+.ButtonGroup {
+  display: flex;
+
+  Button {
+    margin: 0 5px;
+  }
+}
+
+.center {
+  justify-content: center!important;
+}
+
+.end {
+  justify-content: end!important;
+}
