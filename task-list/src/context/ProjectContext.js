@@ -16,7 +16,7 @@ const projectReducer = (projectState, projectAction) => {
     let projects = [];
 
     if (projectAction.action === 'ADD_PROJECT') {
-        projects = projectState.projects.concat(projectAction.project);
+        projects = [projectAction.project, ...projectState.projects];
     }
 
     if (projectAction.action === 'REMOVE_PROJECT') {
@@ -53,7 +53,8 @@ const projectReducer = (projectState, projectAction) => {
     }
 
     return {
-        projects: projects ?? [],
+        ...projectState, // Not needed here because only one key in state
+        projects: projects,
     }
 }
 

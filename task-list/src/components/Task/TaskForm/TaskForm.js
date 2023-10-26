@@ -15,7 +15,7 @@ const TaskForm = (props) => {
         event.preventDefault();
 
         const task = {
-            title : inputRef.current.value,
+            title : inputRef.current.value.trim(),
             id: (Math.random() * 100).toFixed(0),
         }
 
